@@ -1,0 +1,97 @@
+/* Основной стиль страницы */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #141414; /* Темный фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Занимает весь экран */
+  margin: 0;
+  color: #fff;
+}
+
+/* Контейнер калькулятора */
+#calculator {
+  width: 100%;
+  max-width: 350px; /* Максимальная ширина для удобного отображения */
+  background: #1e1e1e; /* Темный фон калькулятора */
+  border-radius: 20px; /* Скругленные углы */
+  padding: 20px;
+  box-shadow: 0 0 15px #0ff, 0 0 25px #0ff; /* Эффект неона */
+  display: flex;
+  flex-direction: column; /* Вертикальная структура */
+}
+
+/* Дисплей калькулятора */
+#display {
+  width: 100%;
+  height: 80px; /* Высота дисплея */
+  font-size: 2rem; /* Крупный шрифт */
+  text-align: right; /* Текст выравнивается справа */
+  padding: 10px 1px;
+  margin-bottom: 20px; /* Отступ от кнопок */
+  border: none;
+  border-radius: 10px;
+  background: #262626; /* Фон дисплея */
+  color: #0ff; /* Цвет текста */
+  box-shadow: inset 0 0 10px #0ff; /* Внутреннее свечение */
+  outline: none;
+  overflow: hidden; /* Текст обрезается, если выходит за пределы */
+  text-overflow: ellipsis; /* Многоточие для длинных значений */
+}
+
+/* Сетка кнопок */
+#buttons {
+  display: grid; /* Сетка для кнопок */
+  grid-template-columns: repeat(4, 1fr); /* 4 равных столбца */
+  grid-gap: 10px; /* Расстояние между кнопками */
+}
+
+/* Кнопки */
+button {
+  height: 60px; /* Высота кнопок */
+  font-size: 1.5rem; /* Размер текста */
+  background: #1e1e1e; /* Фон кнопок */
+  border: none;
+  border-radius: 10px; /* Скругленные углы */
+  cursor: pointer;
+  color: #0ff; /* Цвет текста кнопок */
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; /* Эффект свечения текста */
+  box-shadow: 0 0 15px #0ff, 0 0 25px #0ff; /* Внешнее свечение */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Анимация при наведении */
+}
+
+/* Эффект при наведении на кнопки */
+button:hover {
+  transform: scale(1.05); /* Увеличение размера */
+  box-shadow: 0 0 20px #0ff, 0 0 30px #0ff; /* Усиление свечения */
+}
+
+/* Операторы */
+button.operator {
+  background: #f72585; /* Цвет кнопок операторов */
+  color: #fff;
+}
+
+button.operator:hover {
+  box-shadow: 0 0 20px #f72585, 0 0 30px #f72585; /* Усиление свечения */
+}
+
+/* Кнопка очистки */
+#clear {
+  background: #ff4800; /* Цвет кнопки очистки */
+}
+
+#clear:hover {
+  box-shadow: 0 0 20px #ff4800, 0 0 30px #ff4800; /* Усиление свечения */
+}
+
+/* Кнопка равно */
+#equals {
+  background: #06d6a0; /* Цвет кнопки "=" */
+  grid-column: span 2; /* Растягиваем кнопку на 2 колонки */
+}
+
+#equals:hover {
+  box-shadow: 0 0 20px #06d6a0, 0 0 30px #06d6a0; /* Усиление свечения */
+}
